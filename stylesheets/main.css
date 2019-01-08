@@ -1,0 +1,25 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+
+.main{
+	background: black;
+	width:600px;
+	height:200px;
+	margin:100px auto;
+	position: relative;
+	padding: 40px;
+}
+
+.clock{
+	background: rgb(104,0,0);
+	color:#ed0404;
+	text-align: center;
+	font-size: 65px;
+	height:100%;
+	padding-top:25px;
+}
