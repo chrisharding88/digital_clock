@@ -9,14 +9,15 @@ function clock() {
 	var mins = fullDate.getMinutes();
 	var secs = fullDate.getSeconds();
 	var aMPM = '';
+	var date = fullDate;
 
 	if (hours === 0){
 		hours = 12;
 	} else if (hours > 12){
-		aMPM = 'P.M';
+		aMPM = 'p.m';
 		hours = hours - 12;
 	}else if (hours <= 12){
-		aMPM = 'A.M.';
+		aMPM = 'a.m.';
 	}
 
 	if (hours < 10){
@@ -32,16 +33,22 @@ function clock() {
 	}
 
 	document.getElementById('hour').innerHTML = hours;
-	document.getElementById('min').innerHTML = ": " + mins;
-	document.getElementById('secs').innerHTML = ": " + secs;
+	document.getElementById('min').innerHTML =  mins;
+	document.getElementById('secs').innerHTML = secs;
 	document.getElementById('aMPM').innerHTML = aMPM;
+	document.getElementById('date').innerHTML = date.toDateString();
 
 
 }
 
 setInterval(clock,100);
 
+function blinker(){
+	$('.colon').fadeOut(500);
+	$('.colon').fadeIn(500);
+}
 
+setInterval(blinker,1000);
 
 
 
